@@ -12,18 +12,22 @@ var Queue = function() {
 
 var queueMethods = {
 
-enqueue: function(data) {
-
-},
-dequeue: function(data) {
-
-},
-size: function(data) {
-  return this.index1 - this.index2;
-}
-
-
-
+  enqueue: function(data) {
+    this.index1++;
+    this.storage[this.index1] = data;
+    
+  },
+  dequeue: function(data) {
+    if(this.index1 !== this.index2) {
+      this.index2++;
+      var stringToReturn = this.storage[this.index2]
+      delete this.storage[this.index2];
+      return stringToReturn;
+    }
+  },
+  size: function(data) {
+    return this.index1 - this.index2;
+  }
 
 };
 
