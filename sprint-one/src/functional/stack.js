@@ -24,7 +24,7 @@ var Stack = function() {
     count--;
     var stringToReturn = storage[count];
     delete storage[count]; 
-    //delete someInstance[count];
+    
     return stringToReturn;
     
       
