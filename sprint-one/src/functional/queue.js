@@ -4,9 +4,7 @@ var Queue = function() {
   // Use an object with numeric keys to store values
   var storage = {};
   
-  //customer
   var newestIndex = 0;
-  //employee
   var oldestIndex = 0;
 
   // Implement the methods below

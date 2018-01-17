@@ -27,8 +27,6 @@ var Stack = function() {
     
     return stringToReturn;
     
-      
-    
   };
 
   someInstance.size = function() {
