@@ -12,15 +12,21 @@ var Stack = function(data) {
 var stackMethods = {
 
   push: function(data) {
-
+    this.storage[this.count] = data;
+    this.count++;
   },
   pop: function(data) {
-
+    if(this.count > 0){
+      this.count--;
+      var stringToReturn = this.storage[this.count];
+      delete this.storage[this.count];
+      return stringToReturn;
+    }      
   },
   size: function(data) {
     return this.count;
   }
 };
 
-//var testStack = Stack("a");
+
 
