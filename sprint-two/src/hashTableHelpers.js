@@ -12,9 +12,11 @@
 //   limitedArray.get(3); // returns 'hi'
 
 var LimitedArray = function(limit) {
+  //debugger;
   var storage = [];
 
-  var limitedArray = {};
+  var limitedArray = {}; // the object that the LimitedArray function is creating 
+                             // it is storing methods
   limitedArray.get = function(index) {
     checkLimit(index);
     return storage[index];
