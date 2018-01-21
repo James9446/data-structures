@@ -14,13 +14,9 @@ HashTable.prototype.insert = function(k, v) {
   } else {
     this._storage[index] = [[k, v]];
   }
-  //debugger;
-  var ok = "ok";
-
 };
 
 HashTable.prototype.retrieve = function(k) {
-  // debugger;
   var fn = this;
   var index = getIndexBelowMaxForKey(k, this._limit);
   var key;
@@ -28,13 +24,11 @@ HashTable.prototype.retrieve = function(k) {
   var flag = false;
   
   this._storage[index].forEach(function(value) {
-    // debugger;
     if (!flag) {
       if (value && value[0] === k) {
         key = fn._storage[index].indexOf(value);
         isThere = true;
         flag = true;
-        // return;
       } else {
         isThere = false;
       }
@@ -46,18 +40,15 @@ HashTable.prototype.retrieve = function(k) {
 };
 
 HashTable.prototype.remove = function(k) {
-  // debugger;
   var index = getIndexBelowMaxForKey(k, this._limit);
   var key;
   this._storage[index].forEach(function(value) {
-    // debugger;
     if (value[0] === k) {
       key = value.indexOf(k);
     }
   });
   this._storage[index][key] = undefined;
 };
-
 
 
 /*

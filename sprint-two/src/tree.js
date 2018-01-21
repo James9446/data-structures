@@ -25,10 +25,10 @@ treeMethods.contains = function(target) {
     // console.log('doesContains this', this);
     // isTrue = true;
     //debugger;
-    console.log('node.value:', node.value);
-    console.log('target:', target);
+    // console.log('node.value:', node.value);
+    // console.log('target:', target);
     if (node.value === target) {
-      console.log('condition passed');
+      // console.log('condition passed');
       return doesHave = true; 
     }
     if (node.children.length > 0) {
